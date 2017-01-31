@@ -55,8 +55,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
 
-    @post.replies.each do |r|
-      r.destroy
+    @post.replies.each do |r| #post삭제 전에 모든 replies들을 삭제해주는 작업
+       r.destroy
     end
     @post.destroy
     respond_to do |format|
