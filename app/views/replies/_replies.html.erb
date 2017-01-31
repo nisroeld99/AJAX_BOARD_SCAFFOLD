@@ -1,0 +1,8 @@
+<li id ="reply-<%= reply.id %>"><%= reply.content %>
+
+  <%= link_to "삭제", post_reply_path(@post,reply), method: :DELETE,                         remote: true,
+                         data: {confirm: "정말로 삭제하시겠습니까?"} %>
+
+
+
+    </li>

@@ -1,0 +1,5 @@
+(function($){
+    $("#reply_content").val("")
+    var html = "<%= escape_javascript(render(partial: 'replies/replies', locals: {reply: @reply})) %>";
+    $("#comments").append(html);
+})(jQuery)
